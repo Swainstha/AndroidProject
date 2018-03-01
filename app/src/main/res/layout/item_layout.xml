@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/profile"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    style="?android:attr/listSeparatorTextViewStyle"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="1dp"
+        android:src="@mipmap/smoking"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profile_image"
+        android:layout_toEndOf="@+id/profile_image"
+        android:layout_marginLeft="5dp"
+        android:text="Username" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:layout_toRightOf="@+id/profile_image"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/username"/>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/profile_image"
+        android:layout_toRightOf="@+id/profile_image" />
+
+</RelativeLayout>
