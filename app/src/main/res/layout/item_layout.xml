@@ -7,37 +7,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
-        android:id="@+id/profile_image"
+        android:id="@+id/resImage"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginLeft="1dp"
-        android:src="@mipmap/smoking"
-        android:scaleType="fitXY"/>
+        android:layout_marginStart="1dp"
+        android:scaleType="fitXY" />
 
     <TextView
-        android:id="@+id/username"
+        android:id="@+id/resName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/profile_image"
-        android:layout_toEndOf="@+id/profile_image"
-        android:layout_marginLeft="5dp"
-        android:text="Username" />
+        android:layout_alignLeft="@+id/resAddress"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/resAddress"
+        android:layout_marginTop="16dp"
+        android:text="gjvjv" />
 
     <TextView
-        android:id="@+id/address"
+        android:id="@+id/resAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Address"
-        android:layout_toRightOf="@+id/profile_image"
-        android:layout_marginLeft="5dp"
-        android:layout_below="@+id/username"/>
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:layout_toEndOf="@+id/resImage"
+        android:layout_toRightOf="@+id/resImage"
+        android:text="jhbjh" />
 
     <RatingBar
         android:id="@+id/ratingBar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/profile_image"
-        android:layout_toRightOf="@+id/profile_image" />
+        android:layout_alignLeft="@+id/resAddress"
+        android:layout_alignStart="@+id/resAddress"
+        android:layout_below="@+id/resAddress"
+        android:layout_marginTop="12dp"
+        android:numStars="5"
+        android:stepSize="0.5" />
 
 </RelativeLayout>

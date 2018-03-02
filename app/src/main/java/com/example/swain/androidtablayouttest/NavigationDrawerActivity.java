@@ -36,9 +36,9 @@ public class NavigationDrawerActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         tabLayout = findViewById(R.id.tab_layout);
-        tabLayout.addTab(tabLayout.newTab().setText("Popular").setIcon(R.drawable.ic_chat));
-        tabLayout.addTab(tabLayout.newTab().setText("Near Me").setIcon(R.drawable.ic_call));
-        tabLayout.addTab(tabLayout.newTab().setText("Favourites").setIcon(R.drawable.ic_contact));
+        tabLayout.addTab(tabLayout.newTab().setText("Popular").setIcon(R.drawable.trending_up_black));
+        tabLayout.addTab(tabLayout.newTab().setText("Near Me").setIcon(R.drawable.near_me_black));
+        tabLayout.addTab(tabLayout.newTab().setText("Favourites").setIcon(R.drawable.favorite_black));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         final ViewPager viewPager = findViewById(R.id.pager);

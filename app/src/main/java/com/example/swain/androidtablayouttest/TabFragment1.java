@@ -18,7 +18,8 @@ import java.util.ArrayList;
 public class TabFragment1 extends Fragment {
 
 
-    ListView myListView1;
+    private ListView myListView1;
+    private CustomListAdapter adapter;
 
     public TabFragment1() {
         // Required empty public constructor
@@ -28,28 +29,20 @@ public class TabFragment1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        ArrayList<String> foodList = new ArrayList<>();
-        foodList.add("Chicken Momo");
-        foodList.add("Buff Momo");
-        foodList.add("Veg Momo");
-        foodList.add("Paneer Momo");
-        foodList.add("Chicken Momo");
-        foodList.add("Buff Momo");
-        foodList.add("Veg Momo");
-        foodList.add("Paneer Momo");
-        foodList.add("Chicken Momo");
-        foodList.add("Buff Momo");
-        foodList.add("Veg Momo");
-        foodList.add("Paneer Momo");
-        foodList.add("Chicken Momo");
-        foodList.add("Buff Momo");
-        foodList.add("Veg Momo");
-        foodList.add("Paneer Momo");
+        ArrayList<RestaurantInfo> foodList = new ArrayList<>();
+        foodList.add(new RestaurantInfo("Burger House","Sankhamul",3,R.drawable.ic_menu_manage));
+        foodList.add(new RestaurantInfo("Pizza Hut","Thapathali",5,R.drawable.ic_menu_send));
+        foodList.add(new RestaurantInfo("KFC","Durbar Marga",4,R.drawable.ic_menu_gallery));
+        foodList.add(new RestaurantInfo("Mc Donalds","Tripureshwor",5,R.drawable.ic_menu_share));
+        foodList.add(new RestaurantInfo("Sandar","Baneshwor",1,R.drawable.ic_menu_slideshow));
+        foodList.add(new RestaurantInfo("Swadista","Patan Dhoka",2,R.drawable.ic_menu_manage));
+        foodList.add(new RestaurantInfo("Annapurna","Patan",3,R.drawable.ic_menu_camera));
+
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.fragment_tab_fragment1, container, false);
         myListView1 = rootView.findViewById(R.id.myListView1);
-        ArrayAdapter<String> listArrayAdapter = new ArrayAdapter<String>(getContext(),android.R.layout.simple_list_item_1,foodList);
-        myListView1.setAdapter(listArrayAdapter);
+        adapter = new CustomListAdapter(this.getContext(), foodList);
+        myListView1.setAdapter(adapter);
 
         return rootView;
     }
