@@ -15,7 +15,7 @@
         android:scaleType="fitXY" />
 
     <TextView
-        android:id="@+id/resName"
+        android:id="@+id/detail_food_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/detail_food_des"
@@ -33,16 +33,6 @@
         android:layout_toEndOf="@+id/detail_food_image"
         android:layout_toRightOf="@+id/detail_food_image" />
 
-    <RatingBar
-        android:id="@+id/ratingBar"
-        style="@style/Widget.AppCompat.RatingBar.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/detail_food_des"
-        android:layout_alignStart="@+id/detail_food_des"
-        android:layout_below="@+id/detail_food_des"
-        android:layout_marginTop="12dp"
-        android:numStars="5"
-        android:stepSize="0.5" />
+
 
 </RelativeLayout>

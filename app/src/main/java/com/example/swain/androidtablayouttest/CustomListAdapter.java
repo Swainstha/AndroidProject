@@ -1,6 +1,7 @@
 package com.example.swain.androidtablayouttest;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -53,8 +54,8 @@ public class CustomListAdapter extends ArrayAdapter<RestaurantInfo> {
             viewHolder = new ViewHolder();
 
             viewHolder.name = convertView.findViewById(R.id.resName);
-            viewHolder.address = convertView.findViewById(R.id.resAddress);
-            viewHolder.picture = convertView.findViewById(R.id.resImage);
+            viewHolder.address = convertView.findViewById(R.id.detail_food_des);
+            viewHolder.picture = convertView.findViewById(R.id.detail_food_image);
             viewHolder.ratingBar = convertView.findViewById(R.id.ratingBar);
 
             convertView.setTag(viewHolder);
@@ -73,11 +74,12 @@ public class CustomListAdapter extends ArrayAdapter<RestaurantInfo> {
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(context, DetailActivity.class);
-//                intent.putExtra("id", info.id);
-//                context.startActivity(intent);
 
                 ViewHolder v = (ViewHolder)view.getTag();
+                Intent intent = new Intent(context, DetailActivity.class);
+                intent.putExtra("name", v.name.getText());
+                intent.putExtra("location", v.address.getText());
+                context.startActivity(intent);
 
             }
         });
